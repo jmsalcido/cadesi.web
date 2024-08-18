@@ -4,10 +4,18 @@ import React from "react";
 import {useState} from 'react'
 import {Dialog, DialogPanel} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon, HomeIcon} from '@heroicons/react/24/outline'
-import {Navigation} from "@/app/components/header/navigation";
 
-export const Header: React.FC = () => {
+interface Props {
+  navigation: {
+    name: string;
+    href: string;
+  }[];
+}
+
+export const Header: React.FC<Props> = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const {navigation} = props;
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -29,7 +37,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {Navigation.map((item) => (
+          {navigation.map((item) => (
             <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
               {item.name}
             </a>
@@ -61,7 +69,7 @@ export const Header: React.FC = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {Navigation.map((item) => (
+                {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
