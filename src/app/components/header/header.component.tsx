@@ -4,14 +4,7 @@ import React from "react";
 import {useState} from 'react'
 import {Dialog, DialogPanel} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon, HomeIcon} from '@heroicons/react/24/outline'
-
-const navigation = [
-  {name: 'Quiénes Somos', href: '#'},
-  {name: 'Miembros', href: '#'},
-  {name: 'Próximos Proyectos', href: '#'},
-  {name: 'Aliados', href: '#'},
-  {name: 'Contacto', href: '#'},
-]
+import {Navigation} from "@/app/components/header/navigation";
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -36,7 +29,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {Navigation.map((item) => (
             <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
               {item.name}
             </a>
@@ -68,7 +61,7 @@ export const Header: React.FC = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {Navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
