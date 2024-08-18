@@ -1,12 +1,10 @@
-import {Hero} from "@/app/components/hero.component";
-import {Header} from "@/app/components/header.component";
-import {Members} from "@/app/components/memebers.component";
-import {Section} from "@/app/components/section.component";
+import React from 'react';
+import {Header, Hero, Members, Section} from "@/app/components";
 
 const navigation = [
   {name: 'Quiénes Somos', href: '#quienes-somos'},
   {name: 'Miembros', href: '#miembros'},
-  {name: 'Próximos Proyectos', href: '#'},
+  {name: 'Próximos Proyectos', href: '#proximos-proyectos'},
   {name: 'Aliados', href: '#'},
   {name: 'Contacto', href: '#'},
 ]
@@ -32,18 +30,28 @@ const coffeeShops = [
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-cadesi overflow-hidden">
       <Header navigation={navigation}/>
-      <Hero header={'CADESI'}
-            subheader={'Colectivo de Café del Desierto'}/>
+      <Hero />
       <Section header={navigation[0].name}
                id={'quienes-somos'}
-               backgroundUrl={'https://i.imgur.com/vHiGXaT.png'}
+               backgroundUrl={'https://res.cloudinary.com/otfusion/image/upload/v1723948290/vHiGXaT_vdzdog.jpg'}
                description={'Somos un colectivo que promueve, enaltece y celebra la cultura del café en el desierto de Sonora.\n' +
                  '\n' +
                  'Cafeterías, casas tostadoras, baristas y fans del café, ¡bienvenidos!\n'}
       />
       <Members coffeeShops={coffeeShops}/>
+      <Section header={navigation[2].name}
+               id={'proximos-proyectos'}
+               description={'Pasaporte del Café (imagen) Registra a tu cafetería aquí (google form)\n' +
+                 'CADESI Talks: tertulias informales para hablar de un tema específico del café \n' +
+                 'Colecta para Casas Hogares en diciembre\n' +
+                 'Festival del Café 2025\n'}
+      />
+      <Section header={'Aliados'}
+               id={'aliados'}
+               description={'¿Te interesa dar algún curso o taller sobre un tema de café? ¿Quieres vender el Pasaporte del Café de Hermosillo en tu cafetería? ¿Quieres apoyar como voluntario en los eventos? ¡Contáctanos!\n'}
+      />
     </main>
   );
 }

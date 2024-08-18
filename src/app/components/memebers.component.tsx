@@ -10,10 +10,10 @@ interface Props {
 export const Members: React.FC<Props> = (props) => {
   const {coffeeShops} = props;
   return (
-    <div id={"miembros"} className="bg-white py-24 sm:py-32">
+    <div id={"miembros"} className="bg-cadesi py-24 sm:py-32 text-cadesi-font">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Miembros
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -26,7 +26,7 @@ export const Members: React.FC<Props> = (props) => {
               <div className="flex items-center gap-x-6">
                 <img alt="" src={coffeeShop.imageUrl} className="h-16 w-16 rounded-full"/>
                 <div>
-                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{coffeeShop.name}</h3>
+                  <h3 className="text-base font-semibold leading-7 tracking-tight">{coffeeShop.name}</h3>
                 </div>
               </div>
             </li>

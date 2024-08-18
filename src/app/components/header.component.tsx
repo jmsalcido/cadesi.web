@@ -22,7 +22,7 @@ export const Header: React.FC<Props> = (props) => {
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">CADESI</span>
             <HomeIcon aria-hidden="true" className="h-6 w-6"/>
           </a>
         </div>

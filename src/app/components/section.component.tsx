@@ -11,7 +11,7 @@ export const Section: React.FC<Props> = (props) => {
   const {id, header, description, backgroundUrl} = props;
 
   return (
-    <div id={id} className="relative isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
+    <div id={id} className="relative isolate overflow-hidden bg-cadesi-font py-18 sm:py-24 min-h-screen">
       <img
         alt=""
         src={backgroundUrl}
