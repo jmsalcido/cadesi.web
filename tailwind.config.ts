@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'cadesi': '#F3EAD9',
-        'cadesi-font': '#4E5F4B',
+        'primary': '#F3EAD9',
+        'secondary': '#4E5F4B',
+
       },
     },
   },

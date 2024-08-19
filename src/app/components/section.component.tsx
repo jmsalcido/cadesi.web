@@ -5,18 +5,29 @@ interface Props {
   header: string;
   description: string;
   backgroundUrl?: string;
+  maskColor?: string;
+  height?: string;
 }
 
 export const Section: React.FC<Props> = (props) => {
-  const {id, header, description, backgroundUrl} = props;
+  const {
+    id,
+    header,
+    description,
+    backgroundUrl,
+    maskColor = 'rgba(0, 0, 0, 0.5)', // Default to black with 50% opacity
+    height = 'min-h-screen',
+  } = props;
 
   return (
-    <div id={id} className="relative isolate overflow-hidden bg-cadesi-font py-18 sm:py-24 min-h-screen">
+    <div id={id} className={`relative isolate overflow-hidden bg-cadesi-font py-18 sm:py-24 ${height}`}>
       <img
         alt=""
         src={backgroundUrl}
         className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
       />
+      <div className="absolute inset-0 -z-10" style={{backgroundColor: maskColor}}></div>
+      {/* Mask */}
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
