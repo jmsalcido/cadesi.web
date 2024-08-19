@@ -24,9 +24,9 @@ export const Members: React.FC<Props> = (props) => {
           {coffeeShops.map((coffeeShop) => (
             <li key={coffeeShop.name}>
               <div className="flex items-center gap-x-6">
-                <img alt="" src={coffeeShop.imageUrl} className="h-16 w-16 rounded-full"/>
+                <img alt="" src={coffeeShop.imageUrl} className="h-32 w-32 rounded-full"/>
                 <div>
-                  <h3 className="text-base font-semibold leading-7 tracking-tight">{coffeeShop.name}</h3>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight">{coffeeShop.name}</h3>
                 </div>
               </div>
             </li>

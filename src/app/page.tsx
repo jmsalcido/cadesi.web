@@ -12,19 +12,19 @@ const navigation = [
 const coffeeShops = [
   {
     name: 'Josefina Café',
-    imageUrl: 'https://placehold.co/800x800'
+    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724034172/josefina-logo_hyjepc.png'
   },
   {
     name: 'Dante y Nova',
-    imageUrl: 'https://placehold.co/800x800'
+    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724035053/DYN-logo_dnznkn.png'
   },
   {
     name: 'Culto al Perro Café',
-    imageUrl: 'https://placehold.co/800x800'
+    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724035257/logocpc_rs84yp.png'
   },
   {
     name: 'El Chapucero',
-    imageUrl: 'https://placehold.co/800x800'
+    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724034775/Chapucero_roc0ku.png'
   },
 ];
 
