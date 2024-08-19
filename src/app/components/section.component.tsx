@@ -22,7 +22,7 @@ export const Section: React.FC<Props> = (props) => {
   } = props;
 
   return (
-    <div id={id} className={`relative isolate overflow-hidden bg-cadesi-font py-24 sm:py-24 ${height}`}>
+    <div id={id} className={`relative isolate overflow-hidden bg-cadesi-font py-24 sm:py-24`} style={{ height }}>
       <img
         alt=""
         src={backgroundUrl}

@@ -5,28 +5,9 @@ const navigation = [
   {name: 'Quiénes Somos', href: '#quienes-somos'},
   {name: 'Miembros', href: '#miembros'},
   {name: 'Próximos Proyectos', href: '#proximos-proyectos'},
-  {name: 'Aliados', href: '#'},
-  {name: 'Contacto', href: '#'},
+  {name: 'Aliados', href: '#aliados'},
+  {name: 'Contacto', href: '#contacto'},
 ]
-
-const coffeeShops = [
-  {
-    name: 'Josefina Café',
-    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724034172/josefina-logo_hyjepc.png'
-  },
-  {
-    name: 'Dante y Nova',
-    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724035053/DYN-logo_dnznkn.png'
-  },
-  {
-    name: 'Culto al Perro Café',
-    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724035257/logocpc_rs84yp.png'
-  },
-  {
-    name: 'El Chapucero',
-    imageUrl: 'https://res.cloudinary.com/otfusion/image/upload/v1724034775/Chapucero_roc0ku.png'
-  },
-];
 
 export default function Home() {
   return (
@@ -43,7 +24,7 @@ export default function Home() {
                  '\n' +
                  'Cafeterías, casas tostadoras, baristas y fans del café, ¡bienvenidos!\n'}
       />
-      <Members coffeeShops={coffeeShops}/>
+      <Members />
       <Section id={'proximos-proyectos'}
                header={navigation[2].name}
                height={'50vh'}
@@ -59,6 +40,14 @@ export default function Home() {
                height={'50vh'}
                textColor={'text-gray-900'}
                description={'¿Te interesa dar algún curso o taller sobre un tema de café? ¿Quieres vender el Pasaporte del Café de Hermosillo en tu cafetería? ¿Quieres apoyar como voluntario en los eventos? ¡Contáctanos!\n'}
+      />
+      <Section id={'contacto'}
+               header={'Contacto'}
+               height={'50vh'}
+               maskColor={'--secondary-color-rgb-mask'}
+               textColor={'text-white'}
+               description={'cadesihmo@gmail.com\n' +
+                 '@cadesisonora\n'}
       />
     </main>
   );
