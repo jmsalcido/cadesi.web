@@ -51,11 +51,7 @@ export const Header: React.FC<Props> = (props) => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
+              <HomeIcon aria-hidden="true" className="h-6 w-6"/>
             </a>
             <button
               type="button"
@@ -74,6 +70,7 @@ export const Header: React.FC<Props> = (props) => {
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
                   </a>
