@@ -31,7 +31,7 @@ export const Section: React.FC<Props> = (props) => {
       <div className="absolute inset-0 -z-10" style={{backgroundColor: `var(${maskColor})`}}></div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className={`text-4xl font-bold tracking-tight ${textColor} sm:text-6xl`}>
+          <h2 className={`text-4xl font-bold tracking-tight ${textColor} sm:text-5xl`}>
             {header}
           </h2>
         </div>

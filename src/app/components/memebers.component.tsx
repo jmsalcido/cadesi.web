@@ -26,10 +26,10 @@ export const Members: React.FC<Props> = (props) => {
     <div id={"miembros"} className="bg-cadesi py-24 sm:py-32 text-gray-900">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Miembros
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-xl leading-8 text-gray-600">
             Los miembros de CADESI son los líderes en la industria del café en el desierto de Sonora.
           </p>
         </div>
@@ -37,9 +37,9 @@ export const Members: React.FC<Props> = (props) => {
           {coffeeShops.map((coffeeShop) => (
             <li key={coffeeShop.name}>
               <div className="flex items-center gap-x-6 text-gray-900">
-                <img alt="" src={coffeeShop.imageUrl} className="h-32 w-32 rounded-full"/>
+                <img alt="" src={coffeeShop.imageUrl} className="h-24 w-24 rounded-full"/>
                 <div>
-                  <h3 className="text-2xl font-semibold leading-7 tracking-tight">{coffeeShop.name}</h3>
+                  <h3 className="text-xl font-semibold leading-7 tracking-tight">{coffeeShop.name}</h3>
                 </div>
               </div>
             </li>

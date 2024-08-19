@@ -10,15 +10,16 @@ interface Props {
     name: string;
     href: string;
   }[];
+  className?: string;
 }
 
 export const Header: React.FC<Props> = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const {navigation} = props;
+  const {navigation, className} = props;
 
   return (
-    <header className="absolute inset-x-0 top-0 z-10">
+    <header className={`${className} absolute inset-x-0 top-0 z-10`}>
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
