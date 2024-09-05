@@ -44,20 +44,6 @@ export default function Home() {
           <li className="my-5">Colecta para Casas Hogares en Diciembre</li>
           <li className="my-5">Festival del Café 2025</li>
         </ul>
-        <div className={'my-10'}>
-          <a href={'https://forms.gle/CMbWYrHaEdf8MhQd7'}>
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-4 rounded inline-flex items-center">
-              <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                   strokeWidth="1.5"
-                   stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round"
-                      d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0  0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
-              </svg>
-              <span>Pasaporte del Café</span>
-            </button>
-          </a>
-        </div>
       </Section>
       <Section id={'aliados'}
                header={'Aliados'}
