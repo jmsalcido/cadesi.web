@@ -1,7 +1,7 @@
 'use client';
 
-import React, {useState} from 'react';
-import {EventBanner, Header, Hero, Members, Section} from "@/app/components";
+import React from 'react';
+import {Header, Hero, Members, Section} from "@/app/components";
 
 const navigation = [
   {name: 'Quiénes Somos', href: '#quienes-somos'},
@@ -12,20 +12,9 @@ const navigation = [
 ]
 
 export default function Home() {
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
-
   return (
     <main className="bg-primary overflow-hidden">
-      {isBannerVisible && (
-        <EventBanner
-          name={'Pasaporte del Café'}
-          message={'Registra a tu cafetería para 2025!'}
-          buttonText={'Registrate Aqui!'}
-          link={'https://forms.gle/CMbWYrHaEdf8MhQd7'}
-          onClose={() => setIsBannerVisible(false)}
-        />
-      )}
-      <Header navigation={navigation} className={isBannerVisible ? 'mt-12' : ''}/>
+      <Header navigation={navigation}/>
       <Hero/>
       <Section id={'quienes-somos'}
                header={navigation[0].name}
