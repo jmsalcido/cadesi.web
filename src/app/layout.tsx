@@ -1,6 +1,6 @@
 import React from "react";
 import type {Metadata} from "next";
-import {Inter, Roboto} from "next/font/google";
+import {Inter, Roboto, EB_Garamond} from "next/font/google";
 import "./globals.css";
 import {PHProvider} from "@/app/providers";
 import dynamic from "next/dynamic";
@@ -10,6 +10,12 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ['normal', 'italic'],
+});
+
+const ebgaramond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <PHProvider>
-        <body className={`${inter.className} ${roboto.className}`}>
+        <body className={`${inter.className} ${roboto.className} ${ebgaramond.className}`}>
           <PostHogPageView />
           {children}
         </body>

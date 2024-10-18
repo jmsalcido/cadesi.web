@@ -1,13 +1,32 @@
-import React from "react";
+import React from 'react';
 
-interface Props {}
+interface SectionProps {
+  id: string;
+  header: string;
+  backgroundUrl: string;
+  children: React.ReactNode;
+}
 
-export const Hero: React.FC<Props> = (props) => {
+export default function Hero({ id, header, backgroundUrl, children }: SectionProps) {
   return (
-    <div className="relative flex items-center justify-center h-screen bg-cover bg-center overflow-hidden">
-      <div className="text-center text-secondary">
-        <img src={'https://res.cloudinary.com/otfusion/image/upload/v1723948202/Cadesi_fnrfyg.png'} className="h-auto w-full object-cover"/>
+    <section
+      id={id}
+      className="relative isolate overflow-hidden bg-secondary min-h-screen flex items-center justify-center"
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center -z-10 filter blur-sm"
+        style={{ backgroundImage: `url(${backgroundUrl})` }}
+      ></div>
+
+      <div className="absolute inset-0 bg-black opacity-60 -z-10"></div>
+
+      {/* Hero Content */}
+      <div className="relative container mx-auto px-6 lg:px-8 text-center">
+        <h2 className="text-6xl font-serif font-bold text-white sm:text-7xl mb-6 text-shadow-lg">
+          {header}
+        </h2>
+        <div className="mt-4 text-xl text-white max-w-md mx-auto">{children}</div>
       </div>
-    </div>
+    </section>
   );
 }

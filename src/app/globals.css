@@ -7,9 +7,7 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
     --primary-color-rgb: 243, 234, 217;
-    --primary-color-rgb-mask: rgba(243, 234, 217, .8);
     --seconday-color-rgb: 78, 95, 75;
-    --secondary-color-rgb-mask: rgba(78, 95, 75, .8);
 }
 
 @media (prefers-color-scheme: dark) {
