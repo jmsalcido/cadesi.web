@@ -12,7 +12,7 @@
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
     "@next/font": "^14.2.5",
-    "next": "14.2.5",
+    "next": "^14.2.15",
     "postcss": "^8",
     "posthog-js": "^1.155.4",
     "react": "^18",
