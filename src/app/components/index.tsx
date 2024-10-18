@@ -1,7 +1,6 @@
-import {Hero} from "@/app/components/hero.component";
-import {Header} from "@/app/components/header.component";
-import {Members} from "@/app/components/memebers.component";
-import {Hero} from "@/app/components/section.component";
-import {EventBanner} from "@/app/components/banner.component";
+import {EventBanner} from "./banner.component";
+import Header from "./header.component";
+import Hero from "./hero.component";
+import {Members} from "./memebers.component";
 
-export {Hero, Header, Members, Section, EventBanner};
+export {Hero, Header, Members, EventBanner};
