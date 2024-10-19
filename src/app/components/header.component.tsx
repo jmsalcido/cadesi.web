@@ -9,22 +9,21 @@ export default function Header() {
 
   return (
     <header className="bg-secondary text-black h-24 flex items-center">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between">
 
         {/* Left Navigation - Hidden on Mobile */}
         <nav className="hidden md:flex space-x-6">
           <a href="/" className="text-lg text-black font-normal hover:text-primary transition">
             Inicio
           </a>
-          <a href="/about" className="text-lg text-black font-normal hover:text-primary transition">
-            Acerca de
-          </a>
         </nav>
 
         {/* Center Logo */}
         <div className="flex-grow text-center">
+          {/* Use "CADESI" on mobile and full title on larger screens */}
           <a href="/" className="text-2xl font-serif font-normal text-black">
-            Colectivo Cafe del Desierto
+            <span className="block md:hidden">CADESI</span> {/* Shown on small screens */}
+            <span className="hidden md:block">CADESI | Colectivo Cafe del Desierto</span> {/* Shown on medium and larger screens */}
           </a>
         </div>
 
@@ -48,9 +47,6 @@ export default function Header() {
           <nav className="flex flex-col items-center space-y-4 py-4">
             <a href="/" className="text-lg text-black font-normal hover:text-primary transition" onClick={toggleMenu}>
               Inicio
-            </a>
-            <a href="/about" className="text-lg text-black font-normal hover:text-primary transition" onClick={toggleMenu}>
-              Acerca de
             </a>
             <a href="https://cafe-del-desierto.ghost.io/" className="text-lg text-black font-normal hover:text-primary transition" onClick={toggleMenu}>
               Blog
