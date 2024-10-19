@@ -23,7 +23,7 @@ export default function Header() {
           {/* Use "CADESI" on mobile and full title on larger screens */}
           <a href="/" className="text-2xl font-serif font-normal text-black">
             <span className="block md:hidden">CADESI</span> {/* Shown on small screens */}
-            <span className="hidden md:block">CADESI | Colectivo Cafe del Desierto</span> {/* Shown on medium and larger screens */}
+            <span className="hidden md:block">CADESI | Colectivo Café del Desierto</span> {/* Shown on medium and larger screens */}
           </a>
         </div>
 
